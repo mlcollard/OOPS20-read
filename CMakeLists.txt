@@ -1,17 +1,17 @@
 # @file CMakeLists.txt
 # 
-# CMake files for XMLFramework
+# CMake files for read experiments
 
 cmake_minimum_required(VERSION 3.10)
 
 # project info
-project(ReadTest)
+project(Read)
+
+# force release build since used for timing
+set(CMAKE_BUILD_TYPE Release)
 
 # C++11 standard
 set(CMAKE_CXX_STANDARD 17)
-
-# Common bin directory for all executables
-#set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 # Assume each .cpp file is a separate application
 file(GLOB APPLICATIONS "*.cpp")
