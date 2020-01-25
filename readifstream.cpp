@@ -5,13 +5,15 @@
 */
 
 #include <iostream>
+#include <fstream>
 
 int main(int argc, char* argv[]) {
 
-    int total = 0;
+    long total = 0;
     char c;
-    std::cin.unsetf(std::ios::skipws);
-    while (std::cin >> c) {
+    std::ifstream in(argv[1]);
+    in.unsetf(std::ios::skipws);
+    while (in >> c) {
         ++total;
     }
 

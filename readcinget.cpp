@@ -8,10 +8,10 @@
 
 int main(int argc, char* argv[]) {
 
-    int total = 0;
+    long total = 0;
     char c;
     std::cin.unsetf(std::ios::skipws);
-    while (std::cin >> c) {
+    while (std::cin.get(c)) {
         ++total;
     }
 
